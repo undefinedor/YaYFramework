@@ -1,0 +1,17 @@
+{
+    "name": "yayframework/yay",
+    "description": "A Framework Based PHP7.4",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wanghao",
+            "email": "wanghao@imwh.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {"yay\\": ""}
+    }
+}
