@@ -50,6 +50,7 @@ namespace yay\core;
  * }
  * ```
  * `$config`参数(默认`[]`)必须声明到构造器的最后一个参数，并且父类的实现必须在子类的构造器尾部调用。
+ *
  * @since  1.0
  */
 class BaseObject

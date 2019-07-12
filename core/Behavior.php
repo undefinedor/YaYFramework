@@ -6,6 +6,7 @@ namespace yay\core;
  * 行为是所有行为类的基类
  *
  * 一个行为可以将自己的方法与属性`注入`到组件上，不需要修改代码就可以增强已有组件的功能。它还可以响应组件的事件，拦截代码执行。*
+ *
  * @since 1.0
  */
 class Behavior extends BaseObject
@@ -14,7 +15,6 @@ class Behavior extends BaseObject
      * @var Component|null 行为的宿主
      */
     public ?Component $owner;
-
 
     /**
      *
@@ -51,6 +51,7 @@ class Behavior extends BaseObject
      * 如果重写该方法，务必调用父类实现
      *
      * @param Component $owner 宿主组件
+     *
      * @return void
      */
     public function attach(Component $owner): void
