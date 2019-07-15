@@ -522,7 +522,7 @@ class Component extends BaseObject
      * @param string   $name    事件名
      * @param callable $handler 需要被移除的事件处理器,如果为null,附加在该事件上的所有事件处理器都将被移除
      *
-     * @return bool 如果处理器被发现且被移除
+     * @return bool 处理器是否被发现且被移除
      * @see on()
      */
     public function off(string $name, callable $handler = null): bool
@@ -586,7 +586,7 @@ class Component extends BaseObject
 
         $eventHandlers = [];
         foreach ($this->_eventWildcards as $wildcard => $handlers) {
-            if (StringHelper::matchWildcard($wildcard, $name)) {
+            if (Event::matchWildcard($wildcard, $name)) {
                 $eventHandlers = array_merge($eventHandlers, $handlers);
             }
         }
